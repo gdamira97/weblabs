@@ -1,0 +1,16 @@
+          <?php
+              $id = $_GET['id'];
+              $image = "no-image.gif";
+              include("database.php");
+              $query = "SELECT * FROM image WHERE id=$id";
+              $result = mysql_query($query);
+              $num = mysql_num_rows($result);
+              if($num>0){
+              $row = mysql_fetch_array($result);
+              $image = $row['image'];
+            }
+            else{
+              $image = "no-image.gif";
+            }
+              ?>
+              <li><a href="ex.php?id=<?= $id ?>" class="profileimage"><img src="<?= $image ?>" width=30 height=30></a></li>

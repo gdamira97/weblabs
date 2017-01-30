@@ -1,0 +1,26 @@
+<html>
+<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<p>Select subjects:</p>
+		<select ng-model="selectedSubject" ng-options="x.model for x in subjects"></select>
+		<h1>Credit is: {{selectedSubject.credit}} </h1>
+	</div>
+	<script>
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope) {
+		$scope.subjects = [
+		{model : "Java", credit : 4},
+        {model : "Physics", credit : 3},
+        {model : "Python", credit : 3},
+        {model : "C#", credit : 4},
+        {model : "3D", credit : 3},
+        {model : "Game Developing", credit : 4},
+        {model : "Web", credit : 3},
+        {model : "CISCO", credit : 4}
+        ];
+    });
+    if()
+    </script>
+</body>
+</html>

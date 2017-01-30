@@ -1,0 +1,28 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp">
+    <label>x.model for x in subjects</label><input type="checkbox" ng-model="selectedSubject">
+    <!-- <input type="checkbox" ng-model="Physics">
+    <input type="checkbox" ng-model="Web">
+    <input type="checkbox" ng-model="3D">
+    <input type="checkbox" ng-model="Game Developing">
+    <input type="checkbox" ng-model="C#">
+    <input type="checkbox" ng-model="Python"> -->
+  <!-- Credit:<h1 ng-show="Math">3</h1> -->
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+var cr = 0;
+app.controller('myCtrl', function($scope) {
+    $scope.subjects = [
+        {model : "Math for CS", credit : 3},
+        {model : "Java", credit : 3},
+        {model : "Physics", credit : 4}
+    ];
+});
+</script>
+</body>
+</html>

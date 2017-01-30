@@ -1,0 +1,286 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width,minimyscal=1.0, maximum-scale=1.0" /> 
+<title>Youtube</title> 
+
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Roboto+Conden..,300,700&subset=latin,cyrillic); 
+
+.shadow{ 
+-webkit-box<-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75); 
+-moz-box-shadow: 0px 0px 8px -2px rgba( 0,0,0,0.75); 
+box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75); 
+
+} 
+.invisible{ 
+display: none; 
+visibility: hidden; 
+} 
+html{ 
+width: 100%; 
+height: 100%; 
+} 
+body{ 
+margin: 0px; 
+width: 100%; 
+height: 100%; 
+background:url("img/16.jpg"); no-repeat center; 
+background-size: cover; 
+font-family: 'Roboto Condensed', sans-serif; 
+} 
+#wrapping { 
+max-width: 1000px; 
+height: 100%; 
+background: red; 
+margin: 0 auto; 
+} 
+header{ 
+width:100%; 
+height: 100px; 
+background: white; 
+z-index: 3; 
+position: relative; 
+} 
+header #user{ 
+float: right; 
+margin: 10px; 
+} 
+header #user p{ 
+float: left; 
+font-size: 12px; 
+color: grey; 
+margin-top: 30px; 
+} 
+header #user img{ 
+width: 40px; 
+height: 40px; 
+float: left; 
+border-radius: 20px; 
+
+} 
+header input[type="text"]{ 
+float: left; 
+border:0; 
+outline:0; 
+background: #F2F7F8; 
+padding: 15px 30px; 
+width: 200px; 
+margin: 30px 0px 0px 100px; 
+} 
+
+header #logo{ 
+margin:25px; 
+float: left; 
+
+} 
+aside{ 
+width:200px; 
+height: calc(100% - 100px); 
+background: #F2F7F8; 
+float:left; 
+z-index: 2; 
+position: relative; 
+} 
+aside ul{ 
+list-style: none; 
+padding: 0; 
+} 
+
+aside ul li{ 
+padding: 10px; 
+} 
+
+aside ul li:hover{ 
+background: red; 
+color: white; 
+} 
+aside ul a { 
+color:#848D94; 
+text-decoration: none; 
+} 
+article{ 
+width: calc(100% - 200px); 
+height: calc(100% - 100px); 
+background: white; 
+float: left; 
+z-index: 1; 
+position: relative; 
+overflow-y: scroll; 
+} 
+article .name{ 
+margin: 20px; 
+} 
+article .carousel .video{ 
+width:calc(33% - 25px); 
+margin-left: 20px; 
+float: left; 
+cursor: pointer; 
+} 
+article .carousel .video p{ 
+font-size: 15; 
+margin-top: 0; 
+} 
+article .carousel .video p:nth-child(3){ 
+font-size: 10px; 
+color:grey; 
+
+
+} 
+article .carousel .video:hover{ 
+opacity: 0.9; 
+} 
+article .carousel .video img{ 
+width: 100%; 
+height: 100px; 
+border-radius: 3px; 
+} 
+@media screen and (max-width: 720px){ 
+header input[type="text"]{ 
+display:none; 
+visibility: hidden; 
+
+} 
+header #user{ 
+display: none; 
+visibility: hidden; 
+} 
+body{ 
+background: cyan; 
+} 
+header #logo{ 
+float:none; 
+margin:0 auto; 
+display: block; 
+padding-top:25px; 
+} 
+aside{ 
+margin-left: -200px; 
+} 
+article{ 
+width: 100%; 
+} 
+header #menu{ 
+display: block; 
+visibility: visible; 
+width: 40px; 
+position: fixed; 
+margin: 30px; 
+cursor: pointer; 
+} 
+
+} 
+</style> 
+
+</head> 
+
+<body> 
+
+<div id="wrapping" class="shadow"> 
+<header class="shadow"> 
+<img id="menu" class="invisible" src="youtube.png" onclick="menu();"> 
+<img id="logo" src="youtube.png" height="40px"> 
+<input type="text" placeholder="Search" > 
+<div id="user"> 
+<p>Damira</p> 
+<img src="img/img_1906.jpg"> 
+</div> 
+</header> 
+
+<aside class="shadow" id="aside"> 
+<ul> 
+<a href="#"> <li> Home </li> </a> 
+<a href="#"> <li> My Channel </li> </a> 
+<a href="#"> <li> Trending </li> </a> 
+<a href="#"> <li> Subscriptions </li> </a> 
+<a href="#"> <li> History </li> </a> 
+<a href="#"> <li> Watch later </li> </a> 
+<a href="#"> <li> Favorites </li> </a> 
+</ul> 
+</aside> 
+
+<article> 
+<p class="name">Best videos</p> 
+<div class="carousel"> 
+<div class="video"> 
+<img src="img/video/4.jpg"> 
+<p>Чувствуй небо</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/5.jpg"> 
+<p>Старье</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/6.jpg"> 
+<p>В кристаллике счастья</p> 
+<p>SAA</p> 
+</div> 
+</div> 
+<div class="carousel"> 
+<div class="video"> 
+<img src="img/video/7.jpg"> 
+<p>Огнепоглащение</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/8.jpg"> 
+<p>Паутина</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/9.jpg"> 
+<p>Агата</p> 
+<p>SAA</p> 
+</div> 
+</div> 
+<div class="carousel"> 
+<div class="video"> 
+<img src="img/video/10.jpg"> 
+<p>Кристи</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/11.jpg"> 
+<p>SDU</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/12.jpg"> 
+<p>SDU</p> 
+<p>SAA</p> 
+</div> 
+</div> 
+<div class="carousel"> 
+<div class="video"> 
+<img src="img/video/13.jpg"> 
+<p>SDU</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/14.jpg"> 
+<p>SDU</p> 
+<p>SAA</p> 
+</div> 
+<div class="video"> 
+<img src="img/video/15.jpg"> 
+<p>SDU</p> 
+<p>SAA</p> 
+</div> 
+</div> 
+</article> 
+</div> 
+
+<script type="text/javascript"> 
+function menu(){ 
+if(document.getElementsById('aside').style.marginLeft != "0px"){ 
+document.getElementsById('aside').style.marginLeft = "0px"; 
+}else{ 
+document.getElementsById('aside').style.marginLeft = "-200px";
+} 
+} 
+</script> 
+</body> 
+</html>

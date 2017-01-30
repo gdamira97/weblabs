@@ -1,0 +1,102 @@
+<html>
+<head>
+  <style>
+  #cars{
+    border:0px double red;
+    margin:5px;
+    padding:5px;
+  }
+  .car{
+    margin:5px;
+    display:inline-block;
+    width:200px;
+    border:1px solid blue;
+    position:relative;
+  }
+  .car h1{
+    font-size:24px;
+  }
+  .car h1{
+    padding:0px;
+    margin:0px;
+  }
+  .phone{
+    float:right;
+  }
+  .price{
+    font-weight:bold;
+  }
+  .basket{
+    width:20px;
+  }
+  .close{
+    width:20px;
+  }
+  .buttons{
+    position:absolute;
+    right:0px;
+    top:0px;
+  }
+  </style>
+</head>
+<body>
+<div id="cars">
+<div class="car">
+  <img src="http://www.toyota.com/content/vehicle-landing/2016/camry/colorizer/1H1.jpg" width="200px"/>
+  <h1>Toyota Camry</h1>
+  <span class="price">20 000$</span>
+  <span class="phone">+7(707)7150491</span>
+  <div class="buttons">
+    <a href="#basket"><img class="basket" src="http://simpleicon.com/wp-content/uploads/basket-64x64.png"/></a>
+  <a href="#close"><img class="close" src="https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/close-64.png"/></a>
+  </div>
+
+</div>
+<div class="car">
+  <img src="http://www.toyota.com/content/vehicle-landing/2016/camry/colorizer/1H1.jpg" width="200px"/>
+  <h1>BMW X5</h1>
+  <span class="price">10 000$</span>
+  <span class="phone">+7(707)6046012</span>
+    <div class="buttons">
+    <a href="#basket"><img class="basket" src="http://simpleicon.com/wp-content/uploads/basket-64x64.png"/></a>
+  <a href="#close"><img class="close" src="https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/close-64.png"/></a>
+  </div>
+</div>
+<div class="car">
+  <img src="http://www.toyota.com/content/vehicle-landing/2016/camry/colorizer/1H1.jpg" width="200px"/>
+  <h1>Toyota Corolla</h1>
+  <span class="price">15 000$</span>
+  <span class="phone">+7(707)1289001</span>
+    <div class="buttons">
+    <a href="#basket"><img class="basket" src="http://simpleicon.com/wp-content/uploads/basket-64x64.png"/></a>
+  <a href="#close"><img class="close" src="https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/close-64.png"/></a>
+  </div>
+</div>
+<div class="car">
+  <img src="http://www.toyota.com/content/vehicle-landing/2016/camry/colorizer/1H1.jpg" width="200px"/>
+  <h1>BMW 5-series</h1>
+  <span class="price">40 000$</span>
+  <span class="phone">+7(777)7170791</span>  <div class="buttons">
+    <a href="#basket"><img class="basket" src="http://simpleicon.com/wp-content/uploads/basket-64x64.png"/></a>
+  <a href="#close"><img class="close" src="https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/close-64.png"/></a>
+  </div>
+</div>
+</div>
+<script src="jquery-1.12.3.min.js"></script>
+<script>
+$(window).load(function() {
+  $(".basket").click(function(){
+    if($(this).closest(".car").find(".basket").attr("src") == "http://simpleicon.com/wp-content/uploads/dollar_1-64x64.png"){
+        $(this).closest(".car").find(".basket").attr("src", "http://simpleicon.com/wp-content/uploads/basket-64x64.png");
+      }
+      else{
+        $(this).closest(".car").find(".basket").attr("src", "http://simpleicon.com/wp-content/uploads/dollar_1-64x64.png");
+      }
+  });
+  $(".close").click(function(){
+    $(this).closest(".car").hide(".close");
+  });
+});
+</script>
+</body>
+</html>
